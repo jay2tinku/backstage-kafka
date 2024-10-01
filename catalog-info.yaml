@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: my-kafka-service                # Unique name for the Kafka service
+  name: Kafka-cluster
   description: Kafka Cluster
   annotations:
     kafka.apache.org/consumer-groups: my-cluster-kafka  # Kafka cluster consumer group
