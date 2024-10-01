@@ -1,8 +1,14 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  # ...
+  name: my-kafka-service
+  description: Kafka Cluster
   annotations:
     kafka.apache.org/consumer-groups: my-cluster-kafka
+  tags:
+    - kafka
+    - consumer
 spec:
   type: service
+  lifecycle: production
+  owner: my-team
