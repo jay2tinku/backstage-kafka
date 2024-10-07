@@ -1,23 +1,13 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: my-cluster-kafka
-  description: Kafka cluster
-  annotations:
-    # This annotation links the Kafka cluster to the Backstage Kafka plugin
-    backstage.io/kafka-cluster: my-cluster-kafka
-    # The URL to your Kafka management dashboard (e.g., Kafdrop or Confluent Control Center)
-    kafka.apache.org/dashboard-url: "kafdrop-mid-server.apps.66a64ff6d70fa4001ee0caae.ocp.techzone.ibm.com"
-  tags:
-    - kafka
-    - consumer
-    - producer
-  labels:
-    environment: production
+  name: kafka
+  description: An example of a Backstage application.
+  # Example for optional annotations
+  # annotations:
+  #   github.com/project-slug: backstage/backstage
+  #   backstage.io/techdocs-ref: dir:.
 spec:
-  type: service
-  lifecycle: production
-  owner: my-team
-  system: my-system
-  providesApis:
-    - kafka:my-cluster-kafka
+  type: website
+  owner: john@example.com
+  lifecycle: experimental
