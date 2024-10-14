@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: my-cluster-kafka
+  description: My Kafka Cluster
+  annotations:
+    kafka.topic: connect-cluster-offsets
+    kafka.cluster: my-cluster-kafka
+spec:
+  type: service
+  lifecycle: production
+  owner: team@devhub.com
