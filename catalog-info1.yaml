@@ -1,13 +1,35 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: my-cluster-kafka
-  description: My Kafka Cluster
+  name: my-kafka-cluster
+  description: Kafka cluster used for various logs and audit purposes
+  tags:
+    - kafka
+    - logs
+    - audit
   annotations:
-    kafka.topic: connect-cluster-offsets
-    kafka.cluster: my-cluster-kafka
-    kafka.apache.org/dashboard-url: "https://kafdrop-mid-server.apps.66a64ff6d70fa4001ee0caae.ocp.techzone.ibm.com"
+    backstage.io/kafka: "true"
+    backstage.io/techdocs-ref: url:https://your-docs-url
+    monitoring.kafdrop/url: "https://kafdrop-mid-server.apps.66a64ff6d70fa4001ee0caae.ocp.techzone.ibm.com"
 spec:
   type: service
+  owner: my-team
   lifecycle: production
-  owner: team@devhub.com
+  providesApis:
+    - kafka
+  implementsApis:
+    - kafka
+  kafka:
+    clusters:
+      - name: my-cluster-kafka
+        brokers:
+          - "my-cluster-kafka-0.my-cluster-kafka-brokers.kafka-servicenow.svc:9092"
+          - "my-cluster-kafka-1.my-cluster-kafka-brokers.kafka-servicenow.svc:9092"
+          - "my-cluster-kafka-2.my-cluster-kafka-brokers.kafka-servicenow.svc:9092"
+        ssl: true
+        sasl: {}
+    topics:
+      - name: TEST.LOGS.1.APPS
+        consumerGroup: Combined Lag
+      - name: TEST.LOGS.1.AUDIT
+        consumerGroup: Combined Lag
