@@ -9,10 +9,10 @@ metadata:
     - audit
   annotations:
     backstage.io/kafka: "true"
+    kafka.apache.org/clusters: "my-cluster-kafka"
     kafka.apache.org/dashboard-url: "https://kafdrop-mid-server.apps.66a64ff6d70fa4001ee0caae.ocp.techzone.ibm.com"
     #kafka.apache.org/brokers: "my-cluster-kafka-0.my-cluster-kafka-brokers.kafka-servicenow.svc:9092,my-cluster-kafka-1.my-cluster-kafka-brokers.kafka-servicenow.svc:9092,my-cluster-kafka-2.my-cluster-kafka-brokers.kafka-servicenow.svc:9092"
-    kafka.apache.org/clusters: "my-cluster-kafka"
-    monitoring.kafdrop/url: "https://kafdrop-mid-server.apps.66a64ff6d70fa4001ee0caae.ocp.techzone.ibm.com"
+    #monitoring.kafdrop/url: "https://kafdrop-mid-server.apps.66a64ff6d70fa4001ee0caae.ocp.techzone.ibm.com"
     backstage.io/techdocs-ref: url:https://your-docs-url
 spec:
   type: service
