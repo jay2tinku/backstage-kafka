@@ -29,8 +29,7 @@ spec:
           - "my-cluster-kafka-0.my-cluster-kafka-brokers.kafka-servicenow.svc:9092"
           - "my-cluster-kafka-1.my-cluster-kafka-brokers.kafka-servicenow.svc:9092"
           - "my-cluster-kafka-2.my-cluster-kafka-brokers.kafka-servicenow.svc:9092"
-        ssl: true  # Set to true if your Kafka brokers use SSL
-        sasl: {}  # No SASL (authentication) as you mentioned it's not needed
+        ssl: false  # Set to true if your Kafka brokers use SSL
     topics:
       - name: TEST.LOGS.1.APPS
         consumerGroup: Combined Lag
