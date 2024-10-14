@@ -6,6 +6,7 @@ metadata:
   annotations:
     kafka.topic: connect-cluster-offsets
     kafka.cluster: my-cluster-kafka
+    kafka.apache.org/dashboard-url: "https://kafdrop-mid-server.apps.66a64ff6d70fa4001ee0caae.ocp.techzone.ibm.com"
 spec:
   type: service
   lifecycle: production
