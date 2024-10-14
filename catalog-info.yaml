@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: my-kafka-cluster
+  name: my-cluster-kafka
   description: Kafka cluster used for various logs and audit purposes
   annotations:
     backstage.io/kafka: "true"
