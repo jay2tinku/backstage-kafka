@@ -18,6 +18,7 @@ spec:
   type: service
   owner: my-team
   lifecycle: production
+  system: kafka-cluster
   providesApis:
     - kafka
   implementsApis:
