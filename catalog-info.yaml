@@ -6,7 +6,6 @@ metadata:
   tags:
     - kafka
     - logs
-    - audit
   annotations:
     backstage.io/kafka: "true"
     kafka.apache.org/clusters: "my-cluster-kafka"
